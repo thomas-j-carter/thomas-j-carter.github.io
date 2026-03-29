@@ -41,6 +41,8 @@ jobs:
 
       - name: Build Astro site
         run: pnpm build
+        env:
+          CI: true
 
       - name: Verify build output
         run: |
