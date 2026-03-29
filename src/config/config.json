@@ -10,7 +10,5 @@
     "meta_author": "Thomas Carter",
     "meta_image": "/images/og-image.png",
     "meta_description": ""
-  },
-  "label": "My Section",
-  "autogenerate": { "directory": "guides" }
+  }
 }
