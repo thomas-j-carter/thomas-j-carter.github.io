@@ -21,12 +21,13 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Codecraft',
+			customCss: ['./src/styles/global.css'],
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
 					label: 'Guides',
 					items: [
-						// Each item here is one entry in the navigation menu.
+						{ label: 'Dockit Components', slug: 'guides/dockit-components' },
 						{ label: 'Example Guide', slug: 'guides/example' },
 					],
 				},
