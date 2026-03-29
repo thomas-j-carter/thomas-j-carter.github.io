@@ -1,4 +1,4 @@
-name: Deploy MkDocs site
+name: Deploy Astro site
 
 on:
   push:
@@ -15,24 +15,28 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
-          python-version: '3.12'
+          version: latest
 
-      - name: Install MkDocs
-        run: |
-          python -m pip install --upgrade pip
-          pip install mkdocs
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
 
-      - name: Build MkDocs site
-        run: mkdocs build --clean
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build Astro site
+        run: pnpm build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+          publish_dir: ./dist
           publish_branch: gh-pages
           keep_files: false
           allow_empty_commit: true
