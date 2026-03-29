@@ -1,0 +1,15 @@
+{
+  "main": [
+    {
+      "label": "[seti:vite] Getting Started",
+      "translations": {
+        "fr": "[seti:vite] Aan de slag"
+      },
+      "slug": "getting-started"
+    },
+    {
+      "label": "[document] API Reference",
+      "autogenerate": { "directory": "api" }
+    }
+  ]
+}

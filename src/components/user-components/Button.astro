@@ -1,0 +1,59 @@
+---
+interface Props {
+	label: string;
+	link?: string;
+	variant?: "primary" | "secondary" | "outline";
+}
+
+const { label, link = "#", variant = "primary" } = Astro.props;
+---
+
+<a href={link} class={`btn btn-${variant}`}>
+	{label}
+</a>
+
+<style>
+	@layer starlight.components {
+		.btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0.75rem 1.5rem;
+			border-radius: 0.5rem;
+			font-weight: 600;
+			text-decoration: none;
+			transition: all 0.3s ease;
+			cursor: pointer;
+		}
+
+		.btn-primary {
+			background-color: var(--sl-color-accent);
+			color: white;
+		}
+
+		.btn-primary:hover {
+			opacity: 0.9;
+			transform: translateY(-2px);
+		}
+
+		.btn-secondary {
+			background-color: var(--sl-color-gray-6);
+			color: var(--sl-color-white);
+		}
+
+		.btn-secondary:hover {
+			background-color: var(--sl-color-gray-5);
+		}
+
+		.btn-outline {
+			border: 2px solid var(--sl-color-accent);
+			color: var(--sl-color-accent);
+			background-color: transparent;
+		}
+
+		.btn-outline:hover {
+			background-color: var(--sl-color-accent);
+			color: white;
+		}
+	}
+</style>

@@ -1,0 +1,27 @@
+{
+  "main": [
+    {
+      "name": "Getting Started",
+      "url": "/getting-started/",
+      "children": [
+        {
+          "name": "Introduction",
+          "url": "/getting-started/introduction/"
+        },
+        {
+          "name": "Global Settings",
+          "url": "/getting-started/global-settings/"
+        }
+      ]
+    },
+    {
+      "name": "Guides",
+      "url": "/guides/"
+    },
+    {
+      "name": "Reference",
+      "url": "/reference/"
+    }
+  ]
+}
+

@@ -1,0 +1,14 @@
+{
+  "site": {
+    "title": "CodeCraft Engineering Blog",
+    "description": "",
+    "author": "Thomas Carter",
+    "email": "thomas.carter@appliedinnovationcorp.com"",
+    "base_url": "https://thomas-j-carter.github.io",
+  },
+  "metadata": {
+    "meta_author": "Thomas Carter",
+    "meta_image": "/images/og-image.png",
+    "meta_description": ""
+  }
+}

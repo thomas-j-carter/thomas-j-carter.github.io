@@ -1,0 +1,58 @@
+---
+interface Props {
+	question: string;
+	answer: string;
+}
+
+const { question, answer } = Astro.props;
+---
+
+<details class="accordion">
+	<summary>{question}</summary>
+	<div class="accordion-content" set:html={answer} />
+</details>
+
+<style>
+	@layer starlight.components {
+		.accordion {
+			margin: 1rem 0;
+			padding: 0;
+			border: 1px solid var(--sl-color-gray-6);
+			border-radius: 0.5rem;
+			overflow: hidden;
+		}
+
+		.accordion summary {
+			padding: 1rem;
+			cursor: pointer;
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: var(--sl-color-gray-7);
+			transition: background-color 0.3s ease;
+			user-select: none;
+		}
+
+		.accordion summary::before {
+			content: "+";
+			display: inline-block;
+			font-size: 1.5rem;
+			margin-right: 0.5rem;
+			transition: transform 0.3s ease;
+		}
+
+		.accordion[open] summary::before {
+			content: "−";
+		}
+
+		.accordion summary:hover {
+			background-color: var(--sl-color-gray-6);
+		}
+
+		.accordion-content {
+			padding: 1rem;
+			color: var(--sl-color-gray-1);
+		}
+	}
+</style>

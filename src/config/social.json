@@ -1,0 +1,19 @@
+{
+  "social": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/thomas-j-carter/thomas-j-carter.github.io
+    },
+    {
+      "name": "Twitter",
+      "icon": "twitter",
+      "url": "https://twitter.com/yourusername"
+    },
+    {
+      "name": "Discord",
+      "icon": "discord",
+      "url": "https://discord.gg/your-server"
+    }
+  ]
+}

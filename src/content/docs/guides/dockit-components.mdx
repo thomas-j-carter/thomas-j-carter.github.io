@@ -1,0 +1,75 @@
+---
+title: Using Dockit Components
+description: Learn how to use Dockit's custom components in your documentation
+---
+
+import Grid from "~/components/user-components/Grid.astro";
+import NewCard from "~/components/user-components/NewCard.astro";
+import Button from "~/components/user-components/Button.astro";
+import Accordion from "~/components/user-components/Accordion.astro";
+
+# Using Dockit Components
+
+Dockit comes with a set of beautiful custom components to enhance your documentation.
+
+## Grid & Cards
+
+Create responsive grid layouts with cards:
+
+<Grid columns={3}>
+  <NewCard title="⚡ Fast" icon="rocket">
+    Lightning-fast documentation built with Astro
+  </NewCard>
+  <NewCard title="🎨 Beautiful" icon="star">
+    Modern design with Tailwind CSS
+  </NewCard>
+  <NewCard title="📱 Responsive" icon="phone">
+    Works perfectly on all devices
+  </NewCard>
+</Grid>
+
+## Buttons
+
+Add interactive buttons to guide users:
+
+<Button label="Learn More" link="#" variant="primary" />
+<Button label="View Docs" link="#" variant="secondary" />
+<Button label="Get Started" link="#" variant="outline" />
+
+## Accordions
+
+Organize content with expandable sections:
+
+<Accordion
+  question="What is Dockit?"
+  answer="Dockit is a modern documentation theme built on Astro Starlight with custom components and enhanced UI."
+/>
+
+<Accordion
+  question="Can I customize the theme?"
+  answer="Yes! Dockit uses Tailwind CSS and Starlight's theming system, making it highly customizable."
+/>
+
+<Accordion
+  question="How do I add new pages?"
+  answer="Simply create new .md or .mdx files in the src/content/docs/ directory."
+/>
+
+## Component Props
+
+### Grid
+- `columns` - Number of columns (default: 2)
+
+### NewCard
+- `title` - Card title
+- `icon` - Starlight icon name
+- `size` - "large" (default) or "sm"
+
+### Button
+- `label` - Button text
+- `link` - Destination URL
+- `variant` - "primary" (default), "secondary", or "outline"
+
+### Accordion
+- `question` - Summary text
+- `answer` - Expandable content
